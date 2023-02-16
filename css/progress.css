@@ -1,0 +1,348 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300"); /* http://meyerweb.com/eric/tools/css/reset/ 
+ * * v2.0 | 20110126
+ * * License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Customize
+ * * ==========================================================================*/
+html, body {
+  height: 100%;
+  /*for footer can be at least at the bottom of the browser window*/
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* OFTEN USED
+ * *------------------------------- */
+#browser {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.browser_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 260px;
+  margin-left: -500px/2;
+  margin-top: -260px/2;
+  padding: 40px;
+  margin: -170px 0 0 -290px;
+  background: #FFF;
+  border-radius: 5px;
+  text-align: center;
+}
+.browser_content h1 {
+  margin-bottom: 20px;
+}
+.browser_content p {
+  margin-top: 30px;
+}
+
+.browser_note {
+  color: #666;
+  line-height: 1.7;
+  padding: 0 20px;
+}
+.browser_note .autoWrap {
+  display: inline-block;
+}
+
+.browser_chosen {
+  position: relative;
+  width: 480px;
+  margin: 20px auto 0;
+  overflow: hidden;
+}
+.browser_chosen a {
+  float: left;
+  margin: 0 28px 20px;
+  color: #666;
+  line-height: 1.7;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 599px) {
+  .browser_content {
+    width: 100%;
+    height: auto;
+    padding: 40px 0 0;
+    margin: -235px 0 0 -50%;
+    border-radius: 0;
+  }
+  .browser_chosen {
+    width: 240px;
+  }
+}
+/* Set style
+ * * ========================================================================== */
+.progress {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  background: none;
+  margin: 0 auto;
+  box-shadow: none;
+  position: relative;
+  vertical-align: baseline;
+}
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 15px solid #f2f5f5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.progress .progress-left {
+  left: 0;
+}
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  transform-origin: center left;
+}
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 15px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+}
+.progress .progress-right {
+  right: 0;
+}
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  transform-origin: center right;
+  animation: loading-1 0.8s linear forwards;
+}
+.progress .progress-value {
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  color: rgb(250, 245, 245);
+  text-align: center;
+  position: absolute;
+}
+
+@keyframes loading-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes loading-95 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(162deg);
+  }
+}
+@keyframes loading-90 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(144deg);
+  }
+}
+@keyframes loading-85 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(126deg);
+  }
+}
+@keyframes loading-80 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(108deg);
+  }
+}
+@keyframes loading-75 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@keyframes loading-70 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(72deg);
+  }
+}
+@keyframes loading-60 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(36deg);
+  }
+}
+.html .progress-bar {
+  border-color: #e65127;
+}
+.html .progress-left .progress-bar {
+  animation: loading-95 0.5s linear forwards 0.8s;
+}
+.html .progress-value {
+  color: #e65127;
+}
+
+.css .progress-bar {
+  border-color: #0c73b8;
+}
+.css .progress-left .progress-bar {
+  animation: loading-90 0.5s linear forwards 0.8s;
+}
+.css .progress-value {
+  color: #0c73b8;
+}
+
+.js .progress-bar {
+  border-color: #e7a228;
+}
+.js .progress-left .progress-bar {
+  animation: loading-60 0.5s linear forwards 0.8s;
+}
+.js .progress-value {
+  color: #e7a228;
+}
+
+.ps .progress-bar {
+  border-color: #26abfd;
+}
+.ps .progress-left .progress-bar {
+  animation: loading-80 0.5s linear forwards 0.8s;
+}
+.ps .progress-value {
+  color: #26abfd;
+}
+
+.ai .progress-bar {
+  border-color: #ff9a00;
+}
+.ai .progress-left .progress-bar {
+  animation: loading-80 0.5s linear forwards 0.8s;
+}
+.ai .progress-value {
+  color: #ff9a00;
+}
+
+.idd .progress-bar {
+  border-color: #c72450;
+}
+.idd .progress-left .progress-bar {
+  animation: loading-75 0.5s linear forwards 0.8s;
+}
+.idd .progress-value {
+  color: #c72450;
+}
+
+.pr .progress-bar {
+  border-color: #5656b8;
+}
+.pr .progress-left .progress-bar {
+  animation: loading-70 0.5s linear forwards 0.8s;
+}
+.pr .progress-value {
+  color: #5656b8;
+}
+
+/*------------------------------------------
+ * *             tablet 、 Mobile
+ * *------------------------------------------*/
