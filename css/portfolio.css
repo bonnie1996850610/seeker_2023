@@ -408,7 +408,13 @@ section .title h2 {
     display: none;
   }
   .gallery .work-open {
+    padding: 0 0 580%;
+  }
+  #rwd_tw .work-open {
     padding: 0 0 500%;
+  }
+  #media_v .work-open {
+    padding: 0 0 460%;
   }
   .more.work-open {
     padding: 0;
