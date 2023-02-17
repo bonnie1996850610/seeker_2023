@@ -298,8 +298,22 @@ section .title h2 {
   opacity: 1;
 }
 .gallery .work-open {
-  padding: 0 0 115%;
+  padding: 0 0 155%;
   height: 400px;
+}
+
+#rwd_tw .work-open {
+  padding: 0 0 115%;
+}
+#rwd_tw .more.work-open {
+  padding: 0;
+}
+
+#media_v .work-open {
+  padding: 0 0 115%;
+}
+#media_v .more.work-open {
+  padding: 0;
 }
 
 .more {
